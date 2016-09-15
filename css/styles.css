@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+header {
+  background: rgb(45, 57, 69);
+  color: #fff;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter {
+  margin: 0 32.953px;
+  text-align: center;
+}
+
+.newsletter p {
+  padding-bottom: 40px;
+  border-bottom: 5px double #000;
+  color: rgb(164, 169, 174);
+}
+
+.form-container {
+  margin: 0 ;
+  padding: 0 30px;
+}
+
+legend {
+  font-weight: bolder;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  color: rgb(164, 169, 174);
+  font-size: 1.2em;
+  padding:10px 0;
+}
+
+::-webkit-input-placeholder {
+   color: rbg(179, 184, 187);
+   text-align: right;
+   font-size: 16px;
+   font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rbg(179, 184, 187);
+   text-align: right;
+   font-size: 16px;
+   font-style: italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rbg(179, 184, 187);
+   text-align: right;
+   font-size: 16px;
+   font-style: italic;
+}
+
+:-ms-input-placeholder {
+   color: rbg(179, 184, 187);
+   text-align: right;
+   font-size: 12px;
+   font-style: italic;
+}
+
+input,
+select,
+button {
+  height: 60px;
+}
+
+input[type="text"],
+select,
+textarea {
+  background: rgb(239, 240, 241);
+  display: block;
+  margin: 0;
+  width: 100%;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.style-1 input[type="text"] {
+  padding: 10px;
+  border: solid 1px rgb(239, 240, 241);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus {
+  border: solid 3px rgb(70, 105, 139);
+  box-shadow: 0 0 2px 1px #969696;
+}
+
+fieldset {
+  border: none;
+}
+
+.style-2 {
+  margin-top: 20px;
+}
+
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+input[type=checkbox]:not(old) + label,
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+
+input[type=checkbox]:not(old) + label > span,
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+
+input[type=checkbox]:not(old) + label > span {
+  border-radius    : 0.25em;
+}
+
+input[type=radio   ]:not(old) + label > span {
+  border-radius: 50%;
+}
+
+
+input[type=checkbox]:not(old):checked + label > span,
+input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+input[type=checkbox]:not(old):checked + label > span:before{
+  content     : '✓';
+  display     : block;
+  width       : 1em;
+  color       : rgb(70, 105, 139);
+  font-size   : 0.875em;
+  line-height : 1em;
+  text-align  : center;
+  text-shadow : 0 0 0.0714em rgb(115,153,77);
+  font-weight : bold;
+}
+
+input[type=radio]:not(old):checked + label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(70, 105, 139);
+  border-radius    : 50%;
+  background       : rgb(70, 105, 139);
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  height: 150px;
+}
+
+button[type="submit"] {
+  border: none;
+  padding: 20px;
+  color: white;
+  background-color: #4ebbb5;
+  width: 100%;
+  font-size: 1.3em;
+  margin: 10px 0 20px;
+  height: 60px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 15px;
+  color: rgb(164, 169, 174)
+}
