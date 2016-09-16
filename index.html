@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>The Code Review Newsletter</title>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
@@ -20,18 +20,22 @@
     <form>
     <fieldset class="style-1">
       <legend>Contact Information</legend>
-      <label>Full Name</label>
-      <input type="text" placeholder="Required" />
-      <label>Email Address</label>
-      <input type="text" placeholder="Required" />
-      <label>Phone Number</label>
-      <input type="text" />
-      <label>Street Address</label>
-      <input type="text" />
-      <label>City</label>
-      <input type="text" />
-      <label>State</label>
-      <select>
+      <label for="name">Full Name</label>
+      <input type="text" placeholder="Required" id="name" required pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" title="firstname lastname"/>
+      <label for="email">Email Address</label>
+      <input type="email" placeholder="Required" id="email" required/>
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" />
+      <label for="work-phone">Work Phone Number</label>
+      <input type="text" id="work-phone" placeholder="Optional" />
+      <label for="address">Street Address</label>
+      <input type="text" id="address"/>
+      <label for="address2">Address Line 2</label>
+      <input type="text" id="address2" placeholder="Optional"/>
+      <label for="city">City</label>
+      <input type="text" id="city"/>
+      <label for="state">State</label>
+      <select id="state">
         <option selected="selected" value="">Choose Your State</option>
       	<option value="AL">Alabama</option>
       	<option value="AK">Alaska</option>
@@ -85,37 +89,37 @@
       	<option value="WI">Wisconsin</option>
       	<option value="WY">Wyoming</option>
     </select>
-    <label>Zip Code</label>
-    <input type="text"/>
+    <label for="zip">Zip Code</label>
+    <input type="text" id="zip"/>
     </fieldset>
 
       <fieldset class="style-2">
-        <div class="l-o-wrapper">
-        <legend>Newsletter</legend>
-        <legend>Select the newsletters you would like to receive</legend>
-<div class="letter-options">
-          <input id="html" type="checkbox" name="field" value="html">
-          <label for="option"><span><span></span></span>HTML News</label>
-</div>
-<div class="letter-options">
-          <input id="css" type="checkbox" name="field" value="css">
-          <label for="option"><span><span></span></span>CSS News</label>
-</div>
-<div class="letter-options">
-          <input id="js" type="checkbox" name="field" value="javascript">
-          <label for="option"><span><span></span></span>JavaScript News</label>
-        </div>
-      </div>
-      <div class="format-wrapper">
-        <legend>Newsletter format</legend>
 
-        <div class="letter-options">
-          <input id="html5" type="radio" name="field" value="html">
-          <label for="option"><span><span></span></span>HTML</label>
+        <legend>Newsletter</legend>
+        <label>Select the newsletters you would like to receive</label>
+<div>
+          <input id="html" type="checkbox" name="field" value="html">
+          <label for="html"><span><span></span></span>HTML News</label>
+</div>
+<div>
+          <input id="css" type="checkbox" name="field" value="css">
+          <label for="css"><span><span></span></span>CSS News</label>
+</div>
+<div>
+          <input id="js" type="checkbox" name="field" value="javascript">
+          <label for="js"><span><span></span></span>JavaScript News</label>
         </div>
-        <div class="letter-options">
+      
+      <div>
+        <label>Newsletter format</label>
+
+        <div>
+          <input id="html5" type="radio" name="field" value="html">
+          <label for="html5"><span><span></span></span>HTML</label>
+        </div>
+        <div>
           <input id="plain" type="radio" name="field" value="html">
-          <label for="option"><span><span></span></span>Plain Text</label>
+          <label for="plain"><span><span></span></span>Plain Text</label>
         </div>
       </div>
         <label>Other topics you'd like to hear about</label>

@@ -3,7 +3,8 @@
 }
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Rakkas', cursive;
+  background: url('../img/p38Ujl2.jpg');
 }
 
 header {
@@ -23,7 +24,7 @@ header {
 .newsletter p {
   padding-bottom: 40px;
   border-bottom: 5px double #000;
-  color: rgb(164, 169, 174);
+  color: #272C2E;
 }
 
 .form-container {
@@ -39,68 +40,77 @@ legend {
 
 label {
   display: block;
-  color: rgb(164, 169, 174);
-  font-size: 1.2em;
+  color: #272C2E;
+  font-size: 1.1em;
   padding:10px 0;
 }
 
 ::-webkit-input-placeholder {
-   color: rbg(179, 184, 187);
+   color: rgb(179, 184, 187);
    text-align: right;
-   font-size: 16px;
+   font-size: 14px;
    font-style: italic;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: rbg(179, 184, 187);
+   color: rgb(179, 184, 187);
    text-align: right;
    font-size: 16px;
    font-style: italic;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: rbg(179, 184, 187);
+   color: rgb(179, 184, 187);
    text-align: right;
    font-size: 16px;
    font-style: italic;
 }
 
 :-ms-input-placeholder {
-   color: rbg(179, 184, 187);
+   color: rgb(179, 184, 187);
    text-align: right;
    font-size: 12px;
    font-style: italic;
 }
 
-input,
+input[type="text"],
 select,
-button {
+button,
+input[type="email"] {
   height: 60px;
 }
 
 input[type="text"],
 select,
-textarea {
+textarea,
+input[type="email"] {
   background: rgb(239, 240, 241);
   display: block;
   margin: 0;
   width: 100%;
-  appearance: none;
   box-shadow: none;
   border-radius: 3px;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+textarea:focus,
+input[type="email"]:focus {
   outline: none;
 }
 
-.style-1 input[type="text"] {
+.style-1 input[type="text"],
+textarea,
+input[type="email"] {
   padding: 10px;
   border: solid 1px rgb(239, 240, 241);
   transition: box-shadow 0.2s, border 0.2s;
 }
 .style-1 input[type="text"]:focus,
-.style-1 input[type="text"].focus {
+.style-1 input[type="text"].focus,
+textarea:focus,
+textarea.focus,
+input[type="email"]:focus,
+input[type="email"].focus {
   border: solid 3px rgb(70, 105, 139);
   box-shadow: 0 0 2px 1px #969696;
 }
@@ -183,6 +193,9 @@ input[type=radio]:not(old):checked + label > span > span{
   border           : 0.0625em solid rgb(70, 105, 139);
   border-radius    : 50%;
   background       : rgb(70, 105, 139);
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(70,105,139,0.76);
+-moz-box-shadow: 0px 0px 12px 3px rgba(70,105,139,0.76);
+box-shadow: 0px 0px 12px 3px rgba(70,105,139,0.76);
 }
 
 textarea {
@@ -207,5 +220,42 @@ button[type="submit"] {
 footer {
   text-align: center;
   margin-bottom: 15px;
-  color: rgb(164, 169, 174)
+  color: #272C2E;
+}
+
+@media (min-width: 760px) {
+
+  .form-container,
+  .newsletter {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  #zip {
+    width: 200px;
+    margin-bottom: 3em;
+  }
+
+  .style-1 {
+    border-bottom: 2px solid rgb(45, 57, 69);
+  }
+
+  .style-2 {
+    margin-top: 3em;
+  }
+
+  .button {
+    width: 600px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .form-container,
+  .newsletter,
+  .button {
+    width: 800px;
+  }
+
 }
