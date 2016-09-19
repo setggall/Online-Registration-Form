@@ -76,14 +76,16 @@ label {
 input[type="text"],
 select,
 button,
-input[type="email"] {
+input[type="email"],
+input[type="phone"] {
   height: 60px;
 }
 
 input[type="text"],
 select,
 textarea,
-input[type="email"] {
+input[type="email"],
+input[type="phone"] {
   background: rgb(239, 240, 241);
   display: block;
   margin: 0;
@@ -94,13 +96,15 @@ input[type="email"] {
 
 input[type="text"]:focus,
 textarea:focus,
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="phone"]:focus {
   outline: none;
 }
 
 .style-1 input[type="text"],
 textarea,
-input[type="email"] {
+input[type="email"],
+input[type="phone"] {
   padding: 10px;
   border: solid 1px rgb(239, 240, 241);
   transition: box-shadow 0.2s, border 0.2s;
@@ -110,7 +114,9 @@ input[type="email"] {
 textarea:focus,
 textarea.focus,
 input[type="email"]:focus,
-input[type="email"].focus {
+input[type="email"].focus,
+input[type="phone"]:focus,
+input[type="phone"].focus {
   border: solid 3px rgb(70, 105, 139);
   box-shadow: 0 0 2px 1px #969696;
 }
@@ -121,6 +127,10 @@ fieldset {
 
 .style-2 {
   margin-top: 20px;
+}
+
+#format {
+  margin-bottom: 0.5em;
 }
 
 input[type=checkbox]:not(old),
@@ -229,6 +239,20 @@ footer {
   .newsletter {
     width: 600px;
     margin: 0 auto;
+  }
+
+  .style-1 label {
+    margin: 4% 0 2%;
+    display: inline-block;
+    width: 29%;
+    float: left;
+  }
+
+  .style-1 label + input,
+  .style-1 label + select {
+    display: inline-block;
+    width: 70%;
+    margin: 2% 0;
   }
 
   #zip {

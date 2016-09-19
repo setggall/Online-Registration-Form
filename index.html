@@ -20,22 +20,24 @@
     <form>
     <fieldset class="style-1">
       <legend>Contact Information</legend>
+      
       <label for="name">Full Name</label>
-      <input type="text" placeholder="Required" id="name" required pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" title="firstname lastname"/>
+      <input type="text" placeholder="Required" id="name" required pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" title="firstname lastname" name="name"/>
+
       <label for="email">Email Address</label>
-      <input type="email" placeholder="Required" id="email" required/>
+      <input type="email" placeholder="Required" id="email" name="email" required/>
       <label for="phone">Phone Number</label>
-      <input type="text" id="phone" />
+      <input type="phone" id="phone" name="phone" />
       <label for="work-phone">Work Phone Number</label>
-      <input type="text" id="work-phone" placeholder="Optional" />
+      <input type="phone" id="work-phone" name="work-phone" placeholder="Optional" />
       <label for="address">Street Address</label>
-      <input type="text" id="address"/>
+      <input type="text" id="address" name="address"/>
       <label for="address2">Address Line 2</label>
-      <input type="text" id="address2" placeholder="Optional"/>
+      <input type="text" id="address2" name="address2" placeholder="Optional"/>
       <label for="city">City</label>
-      <input type="text" id="city"/>
+      <input type="text" id="city" name="city"/>
       <label for="state">State</label>
-      <select id="state">
+      <select id="state" name="state">
         <option selected="selected" value="">Choose Your State</option>
       	<option value="AL">Alabama</option>
       	<option value="AK">Alaska</option>
@@ -90,7 +92,7 @@
       	<option value="WY">Wyoming</option>
     </select>
     <label for="zip">Zip Code</label>
-    <input type="text" id="zip"/>
+    <input type="text" id="zip" name="zip"/>
     </fieldset>
 
       <fieldset class="style-2">
@@ -98,32 +100,32 @@
         <legend>Newsletter</legend>
         <label>Select the newsletters you would like to receive</label>
 <div>
-          <input id="html" type="checkbox" name="field" value="html">
+          <input id="html" type="checkbox" name="html" value="html">
           <label for="html"><span><span></span></span>HTML News</label>
 </div>
 <div>
-          <input id="css" type="checkbox" name="field" value="css">
+          <input id="css" type="checkbox" name="css" value="css">
           <label for="css"><span><span></span></span>CSS News</label>
 </div>
 <div>
-          <input id="js" type="checkbox" name="field" value="javascript">
+          <input id="js" type="checkbox" name="js" value="javascript">
           <label for="js"><span><span></span></span>JavaScript News</label>
         </div>
-      
+
       <div>
-        <label>Newsletter format</label>
+        <legend id="format">Newsletter format</legend>
 
         <div>
-          <input id="html5" type="radio" name="field" value="html">
+          <input id="html5" type="radio" name="html5" value="html">
           <label for="html5"><span><span></span></span>HTML</label>
         </div>
         <div>
-          <input id="plain" type="radio" name="field" value="html">
+          <input id="plain" type="radio" name="plain" value="html">
           <label for="plain"><span><span></span></span>Plain Text</label>
         </div>
       </div>
-        <label>Other topics you'd like to hear about</label>
-        <textarea></textarea>
+        <label for="topics">Other topics you'd like to hear about</label>
+        <textarea id="topics"></textarea>
       </fieldset>
         <button type="submit">Sign Up</button>
     </form>
