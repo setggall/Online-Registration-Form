@@ -242,17 +242,18 @@ footer {
   }
 
   .style-1 label {
-    margin: 4% 0 2%;
+    margin: 2% 0 2%;
     display: inline-block;
     width: 29%;
     float: left;
+    padding-top: 8px;
   }
 
   .style-1 label + input,
   .style-1 label + select {
     display: inline-block;
-    width: 70%;
-    margin: 2% 0;
+    width: 68%;
+    margin: 3% 0;
   }
 
   #zip {
